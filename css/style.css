@@ -3,10 +3,11 @@
  * {
      box-sizing: border-box;
  }
+
  body {
    font-family: 'Roboto', sans-serif;
    margin: 0;
-
+   padding: 0;
  }
 
  p {
@@ -17,11 +18,16 @@
 
  .container {
      width: 100%;
-     max-width: 1120px;
+     max-width: 1140px;
      padding-left: 20px;
      padding-right: 20px;
      margin-right: auto;
      margin-left: auto;
+ }
+
+ *:focus {
+     outline: 2px dottet #ff7500;
+     outline-offset: 3px;
  }
 
  .site-header-container {
@@ -39,6 +45,10 @@
      transition: opacity 0.4s;
  }
 
+ .logo-link img {
+     display: block;
+ }
+
  .logo-link:hover {
     opacity: 0.8;
  }
@@ -54,15 +64,21 @@
 
  .site-navbar-items {
      display: flex;
-     
+     padding: 0;
+     margin-right: 32px;
  }
 
- .site-navbar-items li {
+ .site-navbar-items .site-navbar-item {
      list-style: none;
      padding: 0;
+     margin-right: 32px;
  }
 
- .site-navbar-items li a {
+ .site-navbar-items:last-child {
+     margin-right: 0;
+ }
+
+ .site-navbar-items .site-navbar-item a {
      font-size: 13px;
      line-height: 15px;
      letter-spacing: 1px;
@@ -73,11 +89,11 @@
      transition: 0.4s ease;
  }
 
- .site-navbar-items li a:hover {
+ .site-navbar-items .site-navbar-item a:hover {
      color: #ff7500;
  }
 
- .site-navbar-items li a:active {
+ .site-navbar-items .site-navbar-item a:active {
      opacity: 0.6;
  }
 
@@ -110,7 +126,8 @@
  .hero {
      background-color: #252420;
      color: #fff;
-    
+     padding-top: 80px;
+     padding-bottom: 80px;
  }
 
  .hero-content {
@@ -122,6 +139,7 @@
      height: 3px;
      background-color: #ff7500;
      border: none;
+     margin: 0 80px 30px 0;
  }
 
  .hero-heading {
@@ -142,7 +160,8 @@
  }
 
  .features-list {
-     padding: 0;
+    padding: 0;
+    margin: 0;
  }
 
  .features-item {
@@ -155,39 +174,64 @@
     font-size: 72px ;
     line-height:86,4px;
     letter-spacing:0.5px; 
-    
+    margin-top: 0;
+    margin-bottom: 72px;
+ }
+
+ .feature-title {
+     margin-top: 0;
+     margin-bottom: 12px;
+     font-size: 24px;
+     line-height: 1.2;
+ }
+
+ .feature-info {
+     margin: 0;
  }
 
  .features-heading span {
      color: #ff7500;
  }
 
- .features-img {
-     background-color: rgba(255, 117, 0, 0.2);
-     padding: 20px;
-     border-radius: 100%;
- }
-
- .features-content ul {
+ .features-item-img {
      display: flex;
      justify-content: center;
      align-items: center;
+     width: 100px;
+     height: 100px;
+     background-color: rgba(255, 117, 0, 0.2);
+     border-radius: 50%;
+     margin-bottom: 32px;
  }
 
- .features-content ul li {
+ .features-content .features-list {
+     display: flex;
+     /* justify-content: center; */
+     align-items: center;
+ }
+
+ .features-content .features-list .features-item {
      list-style: none;
+     margin-right: 40px;
+ }
+
+ .features-content .features-item:last-child {
+     margin-right: 0;
  }
 
  /* Sale  */
- .sale-container {
-     display: flex;
-     justify-content: space-around;
+ .sale {
+     padding-top: 120px;
+     padding-bottom: 160px;
  }
 
- .sale {
+ .sale-container {
      background: #252420;
      color: #fff;
+     padding: 64px;
      border-radius: 12px;
+     display: flex;
+     justify-content: space-around;
  }
 
  .sale-content {
@@ -199,8 +243,23 @@
  }
 
  .sale-heading {
+     margin-top: 0;
+     margin-bottom: 24px;
      font-size: 40px;
      line-height: 1.2;
+ }
+
+ .sale-info-wrapper {
+     margin-bottom: 24px;
+ }
+
+ .sale-text {
+     margin-top: 0;
+     margin-bottom: 12px;
+ }
+
+ .sale-text:last-child {
+     margin-bottom: 0;
  }
 
  .sale-img {
@@ -220,12 +279,23 @@
      align-items: center;
  }
 
+ .footer-line {
+     height: 3px;
+     background-color: rgba(37, 36, 32, 0.2);
+     border: 0;
+     margin-top: 40px;
+     margin-bottom: 64px;
+ }
+
  .socials a i {
      font-size: 24px;
      color: #252420;
      padding: 0;
      transition: 0.4s;
+     margin-right: 16px;
  }
+
+ 
 
  .socials a i:hover {
      color: #ff7500;
@@ -235,22 +305,34 @@
      opacity: 0.6;
  }
 
- .footer-bottom {
+ .footer-bottom-container {
      display: flex;
      justify-content: space-evenly;
  }
 
  .footer-items {
      padding: 0;
+     margin: 0;
+     margin-right: 40px;
      width: 224px;
+ }
+
+ .footer-items:last-child {
+     margin-right: 0;
  }
 
  .footer-items li {
      list-style: none;
      line-height: 19px;
+     margin-bottom: 16px;
+ }
+
+ .footer-items li:last-child {
+     margin-bottom: 0;
  }
 
  .footer-items li a{
+     display: block;
     text-decoration: none;
     color: #000;
     transition: 0.4s;
