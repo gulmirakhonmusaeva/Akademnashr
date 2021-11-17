@@ -295,8 +295,6 @@
      margin-right: 16px;
  }
 
- 
-
  .socials a i:hover {
      color: #ff7500;
  }
@@ -344,4 +342,35 @@
 
  .footer-items li a:active {
      opacity: 0.6;
+ }
+
+ /* media query */
+ @media (max-width: 916px){
+
+    .site-navbar-items .site-navbar-item a {
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
+        transition: 0.4s ease;
+    }
+
+    .primary-button {
+        display: inline-block;
+        background-color: #ff7700;
+        color: #fff;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 20px;
+        transition: 0.4s ease;
+    }
+
+    .logo-link img {
+        display: block;
+        width: 150px;
+    }
  }
