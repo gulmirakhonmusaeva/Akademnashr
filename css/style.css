@@ -119,8 +119,9 @@
  /* Hero */
 
  .hero-container {
+     position: relative;
      display: flex;
-     justify-content: space-around;
+     
  }
 
  .hero {
@@ -148,9 +149,14 @@
  }
 
  .hero-img {
+     position: absolute;
+     right: 20px;
+     top: -40px;
      width: 510px;
      height: 510px;
      border-radius: 8px;
+     display: inline-block;
+    filter: drop-shadow(24px 24px 0px rgba(255, 117, 0, 0.6));
  }
 
  /* features */
@@ -172,7 +178,7 @@
     width: 340px;
     font-weight:700; 
     font-size: 72px ;
-    line-height:86,4px;
+    line-height:86.4px;
     letter-spacing:0.5px; 
     margin-top: 0;
     margin-bottom: 72px;
@@ -226,12 +232,13 @@
  }
 
  .sale-container {
+     position: relative;
      background: #252420;
      color: #fff;
      padding: 64px;
      border-radius: 12px;
      display: flex;
-     justify-content: space-around;
+     
  }
 
  .sale-content {
@@ -263,6 +270,9 @@
  }
 
  .sale-img {
+     position: absolute;
+     right: 64px;
+     bottom: 64px;
      border-radius: 10px;
  }
 
